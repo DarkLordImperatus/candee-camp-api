@@ -5,7 +5,6 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using CGen.Core.Api.ExceptionHandling;
-using CGen.Core.Repository.Context;
 using LightInject;
 using LightInject.Microsoft.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -83,8 +82,8 @@ namespace CGen.Core.Api
                         };
                     });
 
-            services.AddDbContext<CGenContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("CGenConnection")));
+            //services.AddDbContext<CGenContext>(options =>
+            //    options.UseSqlServer(Configuration.GetConnectionString("CGenConnection")));
 
 #if (DEBUG)
             services.AddSwaggerGen(options =>

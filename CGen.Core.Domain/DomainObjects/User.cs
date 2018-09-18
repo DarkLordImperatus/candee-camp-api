@@ -10,7 +10,7 @@ namespace CGen.Core.Domain.DomainObjects
         public User()
         {
             UserRoles = new List<UserRole>();
-            Invoices = new List<Invoice>();
+           
         }
 
         [Required]
@@ -28,6 +28,6 @@ namespace CGen.Core.Domain.DomainObjects
         public DateTimeOffset? LastLoggedInDate { get; set; }
         
         public virtual IList<UserRole> UserRoles { get; set; }
-        public virtual IList<Invoice> Invoices { get; set; }
+        
     }
 }

@@ -1,5 +1,5 @@
 ﻿using CGen.Core.Repository.Contracts;
-using CGen.Core.Repository.Repositories;
+
 using LightInject;
 
 namespace CGen.Core.Repository
@@ -8,7 +8,7 @@ namespace CGen.Core.Repository
     {
         public void Compose(IServiceRegistry serviceRegistry)
         {
-            serviceRegistry.Register<IUsersRepository, UsersRespository>();
+            
         }
     }
 }
